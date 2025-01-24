@@ -1,0 +1,46 @@
+# AVS field file
+#
+# AutoDock Atomic Affinity and Electrostatic Grids
+#
+# Created by C:/Users/welcome/Desktop/Docking/autogrid4.exe.
+#
+#SPACING 0.375
+#NELEMENTS 126 126 126
+#CENTER -1.456 0.858 2.514
+#MACROMOLECULE VGSC-2.pdbqt
+#GRID_PARAMETER_FILE C:/Users/welcome/Desktop/Docking/303D.gpf
+#
+ndim=3			# number of dimensions in the field
+dim1=127			# number of x-elements
+dim2=127			# number of y-elements
+dim3=127			# number of z-elements
+nspace=3		# number of physical coordinates per point
+veclen=10		# number of affinity values at each point
+data=float		# data type (byte, integer, float, double)
+field=uniform		# field type (uniform, rectilinear, irregular)
+coord 1 file=VGSC-2.maps.xyz filetype=ascii offset=0
+coord 2 file=VGSC-2.maps.xyz filetype=ascii offset=2
+coord 3 file=VGSC-2.maps.xyz filetype=ascii offset=4
+label=A-affinity	# component label for variable 1
+label=C-affinity	# component label for variable 2
+label=F-affinity	# component label for variable 3
+label=NA-affinity	# component label for variable 4
+label=Cl-affinity	# component label for variable 5
+label=OA-affinity	# component label for variable 6
+label=N-affinity	# component label for variable 7
+label=Br-affinity	# component label for variable 8
+label=Electrostatics	# component label for variable 8
+label=Desolvation	# component label for variable 9
+#
+# location of affinity grid files and how to read them
+#
+variable 1 file=VGSC-2.A.map filetype=ascii skip=6
+variable 2 file=VGSC-2.C.map filetype=ascii skip=6
+variable 3 file=VGSC-2.F.map filetype=ascii skip=6
+variable 4 file=VGSC-2.NA.map filetype=ascii skip=6
+variable 5 file=VGSC-2.Cl.map filetype=ascii skip=6
+variable 6 file=VGSC-2.OA.map filetype=ascii skip=6
+variable 7 file=VGSC-2.N.map filetype=ascii skip=6
+variable 8 file=VGSC-2.Br.map filetype=ascii skip=6
+variable 9 file=VGSC-2.e.map filetype=ascii skip=6
+variable 10 file=VGSC-2.d.map filetype=ascii skip=6
